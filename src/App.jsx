@@ -5,6 +5,8 @@ import MainLayout from './components/layouts/mainLayout'
 import Home from './pages/Home/Home'
 import Cart from './pages/cart/cart'
 import Payment from './pages/payment/payment'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
 
@@ -34,7 +36,14 @@ function App() {
   ]) 
 
   return (
-   <RouterProvider router={router}></RouterProvider>
+    <>
+    <RouterProvider router={router}></RouterProvider>
+     <ToastContainer 
+        position="top-right"
+        autoClose={2000}
+      />
+    </>
+  
   )
 }
 
