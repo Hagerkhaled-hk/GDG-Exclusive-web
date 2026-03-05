@@ -68,7 +68,7 @@ export default function ProductDetails() {
   return (
     
     <div className="max-w-5xl container mx-auto p-8">
-      <div className="grid md:grid-cols-2 gap-10">
+    <div className="grid md:grid-cols-2 gap-10">
 
         <div>
           <img
@@ -78,18 +78,26 @@ export default function ProductDetails() {
           />
 
           <div className="flex gap-3">
-            {product.images?.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                onClick={() => setMainImage(img)}
-                className={`w-20 h-20 object-cover rounded-lg cursor-pointer border ${
-                  mainImage === img ? "border-black" : "border-gray-300"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
+        {product.images?.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            onClick={() => setMainImage(img)}
+            className={`w-20 h-20 object-cover rounded-lg cursor-pointer border ${
+              mainImage === img ? "border-black" : "border-gray-300"
+            }`}
+          />
+        ))}
+      </div>
+      <div className="flex-1">
+        <img
+          src={mainImage}
+          alt={product.title}
+          className="w-full h-full object-cover rounded-xl"
+        />
+      </div>
+
+   </div>
 
         <div>
           <h1 className="text-2xl font-bold mb-4">

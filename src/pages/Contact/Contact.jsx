@@ -8,18 +8,12 @@ export default function Contact(){
     <div className="Contact">
       
          <div className="min-h-screen bg-gray-50 px-6 md:px-20 py-10">
-      
-      {/* Breadcrumb */}
-    {/*   <p className="text-sm text-gray-500 mb-8">
-        Home / <span className="text-black font-medium">Contact</span>
-      </p> */}
 
       <div className="grid md:grid-cols-3 gap-10">
-        
-        {/* Left Card */}
+
         <div className="bg-white shadow-md rounded-lg p-6 space-y-6 md:col-span-1">
           
-          {/* Call To Us */}
+
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="bg-[var(--color-red)] text-white p-3 rounded-full">
@@ -38,7 +32,7 @@ export default function Contact(){
 
           <hr className='text-gray-400' />
 
-          {/* Write To Us */}
+
           <div>
             <div className="flex items-center gap-3 mb-3">
               <div className="bg-[var(--color-red)] text-white p-3 rounded-full">
@@ -60,7 +54,7 @@ export default function Contact(){
           </div>
         </div>
 
-        {/* Right Form */}
+
         <div className="bg-white shadow-md rounded-lg p-8 md:col-span-2">
           
           <div className="grid md:grid-cols-3 gap-6 mb-6">

@@ -18,10 +18,6 @@ export default function About(){
   return <>
   <div className="w-full bg-[var(--color-white)]">
 
-      
-  {/*     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-[var(--color-sec-grey)]">
-        Home / <span className="text-[var(--color-black)] font-medium">About</span>
-      </div> */}
 
      {/* First Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
