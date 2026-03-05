@@ -70,14 +70,8 @@ export default function ProductDetails() {
     <div className="max-w-5xl container mx-auto p-8">
     <div className="grid md:grid-cols-2 gap-10">
 
-        <div>
-          <img
-            src={mainImage}
-            alt={product.title}
-            className="w-full h-full object-cover rounded-xl mb-4"
-          />
-
-          <div className="flex gap-3">
+    <div className="flex gap-4">
+      <div className="flex flex-col md:flex-col gap-3">
         {product.images?.map((img, index) => (
           <img
             key={index}
@@ -89,7 +83,7 @@ export default function ProductDetails() {
           />
         ))}
       </div>
-      <div className="flex-1">
+      <div className="flex-1 ">
         <img
           src={mainImage}
           alt={product.title}
@@ -128,7 +122,6 @@ export default function ProductDetails() {
           <hr className='text-gray-400' />
 
           <div className="max-w-xl mx-auto pt-6 space-y-6">
-
             <div className="flex items-center gap-4">
               <span className="font-medium text-gray-700">Colours:</span>
               <div className="flex gap-3">
@@ -228,8 +221,7 @@ export default function ProductDetails() {
     </div>
 
       </div>
-
-     <div className="max-w-6xl mx-auto py-10 px-4">
+      <div className="max-w-6xl mx-auto py-10 px-4">
       <div className='flex items-center gap-4 my-8'>
         <div className='w-5 h-10 rounded bg-[var(--color-red)]'></div>
         <h2 className="text-xl font-bold text-[var(--color-red)]">Related Items</h2>
@@ -299,4 +291,3 @@ export default function ProductDetails() {
     </div>
   );
 }
-
