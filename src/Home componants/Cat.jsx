@@ -11,9 +11,9 @@ const CategorySection = ({ categories , onSelectCategory , selectedCategory }) =
     scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section className="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8 py-8">
    
-      <div className="flex items-center gap-3 mb-4 sm:mb-6">
+      <div className="flex items-center  gap-3 mb-4 sm:mb-6">
            <p className="text-lg text-[rgba(219,68,68,1)] flex items-center">
         <span className="bg-[rgba(219,68,68,1)] w-4 h-10 inline-block mr-2 rounded mb-3"></span>
         Categories

@@ -5,6 +5,9 @@ import TotalDetails from "../../components/cart/TotalDetails/TotalDetails";
 import RedButton from "../../components/RedButton/RedButton";
 import "./cart-responsive.css";
 import item from "../../assets/images/item-img.png";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../Context/UserContext";
+import LoadingModal from "../../components/loadingModal/LoadingModal";
 
 export default function Cart() {
   const cartItems = [
@@ -12,12 +15,33 @@ export default function Cart() {
   ];
   const cartInfo = [{ total: 160, subtotal: 200 }];
   const navigate = useNavigate();
-
-  const processOrder = () => {
+  const {userToken} = useContext(UserContext);
+   const [loading,setLoading]=useState(false);
+   const processOrder = () => {
     navigate("/payment");
   };
 
+  useEffect(()=>{
+if(!localStorage.getItem("accessToken")){navigate("/login");}
+
+setLoading(true);
+
+setTimeout(()=>{setLoading(false)},1000);
+    const t = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(t);
+
+
+  },[]);
+
+
+
+
+
   return (
+     <div className="AllOrders bg-white rounded-lg text-[var(--sec-text-size)] font-[var(--Inter-regular)] overflow-auto px-8 py-[5px]" >
+          {loading && cartItems.length === 0 ? (
+            <LoadingModal loading={loading} text={"Loading orders..."} />
+          ) : (
     <div className="px-7.5 cart-page  ">
       <div className="flex flex-row justify-center items-start gap-8 font-(--poppines-regular) capitalize  cart-container">
 
@@ -67,5 +91,8 @@ export default function Cart() {
         </div>
       </div>
     </div>
+          ) 
+        }
+          </div>
   );
 }

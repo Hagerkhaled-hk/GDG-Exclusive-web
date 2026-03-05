@@ -57,10 +57,10 @@ const Features = () => {
   ];
 
   return (
-    <div className="mx-auto max-w-[90%] lg:max-w-[1400px] py-12">
+    <div className="mx-auto max-w-[90%]   lg:max-w-[1400px] py-12">
       
 
-      <div className="mb-8">
+      <div className="mb-8 ">
         <p className="text-red-500 font-medium flex items-center gap-3">
           <span className="w-5 h-10 bg-red-500 rounded"></span>
           Featured
@@ -68,8 +68,9 @@ const Features = () => {
         <h2 className="text-3xl font-semibold mt-3">New Arrival</h2>
       </div>
 
-      <section className="mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 md:auto-rows-[260px] gap-6">
+
+      <section className="mb-20 flex flex-col justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-4  md:auto-rows-[260px] gap-6">
           {featuresData.map((feature, index) => (
             <div
               key={index}

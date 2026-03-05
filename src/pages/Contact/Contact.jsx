@@ -10,9 +10,9 @@ export default function Contact(){
          <div className="min-h-screen bg-gray-50 px-6 md:px-20 py-10">
       
       {/* Breadcrumb */}
-      <p className="text-sm text-gray-500 mb-8">
+    {/*   <p className="text-sm text-gray-500 mb-8">
         Home / <span className="text-black font-medium">Contact</span>
-      </p>
+      </p> */}
 
       <div className="grid md:grid-cols-3 gap-10">
         

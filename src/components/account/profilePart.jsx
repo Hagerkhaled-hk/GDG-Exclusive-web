@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProfile } from "../../store/profileSlice";
+
 
 export default function ProfilePart() {
   // fake user data until real context/API is hooked up
@@ -14,7 +17,31 @@ export default function ProfilePart() {
     confirmPassword: "",
   });
   
+  const dispatch =useDispatch();
+const { user, status, error } = useSelector((state) => state.profile);
   
+    useEffect(()=>{
+      if(localStorage.getItem("accessToken"))
+      {
+        console.log(localStorage.getItem("accessToken"));
+        
+        dispatch(fetchProfile());
+ 
+      }
+  
+    },[dispatch])
+  
+    useEffect(( 
+    )=>{
+      console.log(user);
+      
+      setForm(
+  {
+    email: user?.email,
+    newPassword: "",
+    confirmPassword: "",
+  }
+ )},[user])
 
 
   // simulate an async API that always succeeds after a short delay

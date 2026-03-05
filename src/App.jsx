@@ -38,7 +38,7 @@ function App() {
       element: <Contact/>
     },
     {
-      path: "productDetails" ,
+      path: "productDetails/:id" ,
       element: <ProductDetails/>
       
     },

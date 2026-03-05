@@ -1,12 +1,13 @@
 import { Heart } from 'lucide-react';
 import { Eye } from 'lucide-react';
 import { useState } from "react";
+import { useNavigate, useNavigation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Card = ({ product }) => {
   const [isInWishlist, setIsInWishlist] = useState(false);
-
+const navigate = useNavigate();
   // Handle wishlist toggle
   const handleWishlistToggle = (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ const Card = ({ product }) => {
   // Handle quick view action for product details
   const handleQuickView = () => {
     toast("Quick view is opened for " + product.title);
+navigate(`/productDetails/${product.id}`);
   }
 
   return (
