@@ -26,6 +26,7 @@ export default function ProductDetails() {
     setQuantity((prev) => prev + 1);
   };
 
+
   const handleDecrease = () => {
     if (quantity > 1) {
       setQuantity((prev) => prev - 1);
